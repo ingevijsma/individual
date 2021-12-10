@@ -11,7 +11,7 @@ import statsmodels.api as sm
 import seaborn as sns
 
 #Titel toevoegen
-st.title("✈️ NL luchthavens en COVID-19 ✈️")
+st.title("Aviation and weather in the Netherlands")
 
 #Tekst toevoegen
 st.markdown("""
