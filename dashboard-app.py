@@ -38,7 +38,7 @@ df = st.radio(label = "Select period:",
 x = st.radio(label = "Select type of passengers:", 
              options = [df['Total number of passengers'], 
                         df['Total passengers arriving'], 
-                        df['Total passengers departing']]
+                        df['Total passengers departing']])
 
 y = st.radio(label = "Select weather factor:", 
              options = ['TG', 
