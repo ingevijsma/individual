@@ -51,13 +51,13 @@ df = st.radio(label = "Select period:",
 
 fig1 = px.scatter(df = df, 
                   x = 'Total number of passengers', 
-                  y = 'TG', 
-                  hover_name = 'Periods', 
-                  labels = {'variable': 'Weather factor', 'value': 'Value'}, 
-                  opacity = 0.8,
-                  trendline = 'ols', 
-                  trendline_scope = 'trace', 
-                  log_y = True, 
-                  title = 'Number of passengers (arriving/departing) versus the three main weather factors')
+                  y = 'TG') 
+#                   hover_name = 'Periods', 
+#                   labels = {'variable': 'Weather factor', 'value': 'Value'}, 
+#                   opacity = 0.8,
+#                   trendline = 'ols', 
+#                   trendline_scope = 'trace', 
+#                   log_y = True, 
+#                   title = 'Number of passengers (arriving/departing) versus the three main weather factors')
 
 st.plotly_chart(fig1)
