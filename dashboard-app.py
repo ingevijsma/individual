@@ -49,7 +49,7 @@ y = st.radio(label = "Select weather factor:",
                         'RH', 
                         'RHX'])
 
-fig1 = px.scatter(df = Aviation_and_weather_in_July_and_August, 
+fig1 = px.scatter(data_frame = Aviation_and_weather_in_July_and_August, 
                   x = 'Total number of passengers', 
                   y = y) 
 #                   hover_name = 'Periods', 
