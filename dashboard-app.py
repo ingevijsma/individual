@@ -27,17 +27,31 @@ Tekst
 """)
 
 Aviation_and_weather_in_July_and_August = pd.read_csv('Aviation and weather in July and August.csv')
+Average_aviation_July_and_August_and_weather_all_year = pd.read_csv('Average aviation July and August and weather all year.csv')
+Aviation_and_weather_all_year = pd.read_csv('Aviation and weather all year.csv')
   
-df = st.radio(label = "Select period", options = [
-y = st.radio(label = "Kies gewenste activiteit:", 
-             options = ["Totaal aantal vluchten", "Totaal aantal aangekomen vluchten", "Totaal aantal vertrokken vluchten", "Totaal aantal passagiers", 
-                          "Totaal aantal aangekomen passagiers", "Totaal aantal vertrokken passagiers"])
-  
-data1 = pd.read_csv('data_streamlit.csv')
+df = st.radio(label = "Select period:", 
+              options = [Aviation_and_weather_in_July_and_August, 
+                         Average_aviation_July_and_August_and_weather_all_year, 
+                         Aviation_and_weather_all_year]
+              
+x = st.radio(label = "Select type of passengers:", 
+             options = ['Total number of passengers', 
+                        'Total passengers arriving', 
+                        'Total passengers departing']
 
-fig1 = px.scatter(df = aw_year_month, 
-                  x = 'Total passengers departing', 
-                  y = ['SQ', 'TX', 'TG'], 
+y = st.radio(label = "Select weather factor:", 
+             options = ['TG', 
+                        'TN', 
+                        'TX', 
+                        'SQ', 
+                        'DR', 
+                        'RH', 
+                        'RHX'])
+
+fig1 = px.scatter(df = df, 
+                  x = x, 
+                  y = y, 
                   hover_name = 'Periods', 
                   labels = {'variable': 'Weather factor', 'value': 'Value'}, 
                   opacity = 0.8,
