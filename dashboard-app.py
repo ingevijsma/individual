@@ -33,7 +33,10 @@ Aviation_and_weather_all_year = pd.read_csv('Aviation and weather all year.csv')
 df = st.radio(label = "Select period:", 
               options = [Aviation_and_weather_in_July_and_August, 
                          Average_aviation_July_and_August_and_weather_all_year, 
-                         Aviation_and_weather_all_year])
+                         Aviation_and_weather_all_year], 
+              key = ['Aviation and weather in July and August', 
+                     'Average aviation July and August and weather all year', 
+                     'Aviation and weather all year'])
               
 x = st.radio(label = "Select type of passengers:", 
              options = [df['Total number of passengers'], 
