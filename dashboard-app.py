@@ -10,25 +10,11 @@ import seaborn as sns
 #Insert title
 st.title("Aviation and weather in the Netherlands")
 
-#Insert text
-st.markdown("""
-Tekst
-""")
+# Aviation_and_weather_in_July_and_August = pd.read_csv('Aviation and weather in July and August.csv')
+# Average_aviation_July_and_August_and_weather_all_year = pd.read_csv('Average aviation July and August and weather all year.csv')
+# Aviation_and_weather_all_year = pd.read_csv('Aviation and weather all year.csv')
 
-Aviation_and_weather_in_July_and_August = pd.read_csv('Aviation and weather in July and August.csv')
-Average_aviation_July_and_August_and_weather_all_year = pd.read_csv('Average aviation July and August and weather all year.csv')
-Aviation_and_weather_all_year = pd.read_csv('Aviation and weather all year.csv')
-
-#Choose page
-st.sidebar.title("Select period:")
-df = st.sidebar.radio(label = "", 
-                       options = [Aviation_and_weather_in_July_and_August, 
-                                  Average_aviation_July_and_August_and_weather_all_year, 
-                                  Aviation_and_weather_all_year])
-
-#----------
-#Code voor spreidingsdiagram met keuze menu
-if nav == "Histogram":  
+#Scatterplot code
 # df = st.radio(label = "Select period:", 
 #               options = [Aviation_and_weather_in_July_and_August, 
 #                          Average_aviation_July_and_August_and_weather_all_year, 
