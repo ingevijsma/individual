@@ -55,9 +55,7 @@ y = st.radio(label = "Select weather factor:",
                         'RH (All)', 
                         'RHX (All)'])
 
-col1, col2 = st.columns(2)
-
-fig_scatterplot_trendline = col2.checkbox('Trendline', value = False)
+fig_scatterplot_trendline = st.checkbox('Trendline', value = False)
 if fig_scatterplot_trendline == True:
   fig1 = px.scatter(data_frame = df, 
                     x = x, 
