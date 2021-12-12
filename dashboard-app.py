@@ -56,7 +56,7 @@ y = st.radio(label = "Select weather factor:",
                         'RHX (All)'])
 
 st.markdown('***')
-st.markdown("<h3 style='text-align: center; color: black;'>Boxplot</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: black;'>Number of passengers (arriving/departing) versus weather factors</h3>", unsafe_allow_html = True)
 st.markdown('***')
 
 fig_scatterplot_trendline = st.checkbox('Trendline', value = False)
@@ -65,14 +65,12 @@ if fig_scatterplot_trendline == True:
                     x = x, 
                     y = y, 
                     trendline = 'ols', 
-                    trendline_scope = 'trace', 
-                    title = 'Number of passengers (arriving/departing) versus weather factors')
+                    trendline_scope = 'trace')
   
 if fig_scatterplot_trendline == False:
   fig1 = px.scatter(data_frame = df, 
                     x = x, 
-                    y = y, 
-                    title = 'Number of passengers (arriving/departing) versus weather factors')
+                    y = y)
 
 st.plotly_chart(fig1)
 
