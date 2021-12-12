@@ -7,8 +7,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
 
-#Insert title
-st.title("Aviation and weather in the Netherlands")
+st.set_page_config(page_title = 'Aviation and weather in the Netherlands', layout = 'wide')
 
 # Aviation_and_weather_in_July_and_August = pd.read_csv('Aviation and weather in July and August.csv')
 # Average_aviation_July_and_August_and_weather_all_year = pd.read_csv('Average aviation July and August and weather all year.csv')
@@ -56,11 +55,23 @@ y = st.radio(label = "Select weather factor:",
                         'RH (All)', 
                         'RHX (All)'])
 
-fig1 = px.scatter(data_frame = df, 
-                  x = x, 
-                  y = y, 
-                  trendline = 'ols', 
-                  trendline_scope = 'trace', 
-                  title = 'Number of passengers (arriving/departing) versus weather factors')
+fig_scatterplot_trendline = checkbox('Trendline', value = False)
+if fig_scatterplot_trendline == True:
+  fig1 = px.scatter(data_frame = df, 
+                    x = x, 
+                    y = y, 
+                    trendline = 'ols', 
+                    trendline_scope = 'trace', 
+                    title = 'Number of passengers (arriving/departing) versus weather factors')
+  
+if fig_scatterplot_trendline == False:
+  fig1 = px.scatter(data_frame = df, 
+                    x = x, 
+                    y = y, 
+                    title = 'Number of passengers (arriving/departing) versus weather factors')
 
 st.plotly_chart(fig1)
+
+with st.expander('More information:'):
+	st.subheader('Scatterplot extra information')
+	st.markdown('''Tekst''')
