@@ -1,7 +1,7 @@
 #Import streamlit
 import streamlit as st
 from multiapp import MultiApp
-from apps import 
+from apps import Average aviation July and August and average weather all year, Aviation and weather all year, Aviation and weather in July and August
 
 #Import required packages
 import pandas as pd
