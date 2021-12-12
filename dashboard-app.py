@@ -2,10 +2,15 @@
 import streamlit as st
 
 #Import required packages
+from streamlit_folium import folium_static
 import pandas as pd
-import matplotlib.pyplot as plt
+import numpy as np
 import plotly.express as px
-import seaborn as sns
+import plotly.graph_objects as go
+import plotly.offline as pyo
+import geopandas as gpd
+from statsmodels.formula.api import ols
+import folium
 
 st.set_page_config(page_title = 'Aviation and weather in the Netherlands', layout = 'wide')
 
