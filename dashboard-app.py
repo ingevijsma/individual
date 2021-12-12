@@ -43,7 +43,7 @@ x = st.radio(label = "Select type of passengers:",
                         'Total passengers departing (July, August)', 
                         'Total number of passengers (July, August - All)', 
                         'Total passengers arriving (July, August - All)', 
-                        'Total passengers departing (July, August - All), 
+                        'Total passengers departing (July, August - All)', 
                         'Total number of passengers (All)', 
                         'Total passengers arriving (All)', 
                         'Total passengers departing (All)'])
