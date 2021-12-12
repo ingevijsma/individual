@@ -1,6 +1,7 @@
 #Import streamlit
 import streamlit as st
 from multiapp import MultiApp
+from apps import 
 
 #Import required packages
 import pandas as pd
