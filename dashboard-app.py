@@ -3,13 +3,11 @@ import streamlit as st
 
 #Import required packages
 import pandas as pd
-import numpy as np
+import seaborn as sns
 import plotly.express as px
-import plotly.graph_objects as go
-import plotly.offline as pyo
-from statsmodels.formula.api import ols
+import matplotlib.pyplot as plt
 
-st.set_page_config(page_title = 'Aviation and weather in the Netherlands', layout = 'wide')
+st.title('Aviation and weather in the Netherlands')
 
 # Aviation_and_weather_in_July_and_August = pd.read_csv('Aviation and weather in July and August.csv')
 # Average_aviation_July_and_August_and_weather_all_year = pd.read_csv('Average aviation July and August and weather all year.csv')
