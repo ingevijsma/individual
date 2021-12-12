@@ -3,9 +3,7 @@ import streamlit as st
 
 #Import required packages
 import pandas as pd
-import seaborn as sns
 import plotly.express as px
-import matplotlib.pyplot as plt
 
 st.title('Aviation and weather in the Netherlands')
 
