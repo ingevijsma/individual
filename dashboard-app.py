@@ -8,7 +8,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import plotly.offline as pyo
 from statsmodels.formula.api import ols
-import folium
 
 st.set_page_config(page_title = 'Aviation and weather in the Netherlands', layout = 'wide')
 
