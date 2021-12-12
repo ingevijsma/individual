@@ -1,7 +1,15 @@
 #Import streamlit
 import streamlit as st
 from multiapp import MultiApp
-from apps import Average aviation July and August and average weather all year, Aviation and weather all year, Aviation and weather in July and August
+from apps import Summer, Mix, Year
+
+app = MultiApp()
+
+app.add_app("Summer", Summer.app)
+app.add_app("Mix", Mix.app)
+app.add_app("Year", Year.app)
+
+app.run()
 
 #Import required packages
 import pandas as pd
