@@ -1,15 +1,19 @@
 #Import streamlit
 import streamlit as st
-from multiapp import MultiApp
-from apps import Summer, Mix, Year
+# from multiapp import MultiApp
+# from apps import Summer, Mix, Year
 
-app = MultiApp()
+# app = MultiApp()
 
-app.add_app("Summer", Summer.app)
-app.add_app("Mix", Mix.app)
-app.add_app("Year", Year.app)
+# app.add_app("Summer", Summer.app)
+# app.add_app("Mix", Mix.app)
+# app.add_app("Year", Year.app)
 
-app.run()
+# app.run()
+
+df = Summer, Mix, Year
+
+st.selectbox('Select period:', df)
 
 #Import required packages
 import pandas as pd
