@@ -74,8 +74,6 @@ if fig_scatterplot_trendline == False:
 
 st.plotly_chart(fig1)
 
-$ pip install streamlit --upgrade
-
 with st.expander('More information:'):
 	st.subheader('Scatterplot extra information')
 	st.markdown('''Tekst''')
