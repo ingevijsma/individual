@@ -3,6 +3,3 @@ pandas==0.25.3
 base58==2.0.0
 numpy==1.18.1
 plotly
-
-$ pip install --upgrade streamlit
-
