@@ -4,7 +4,6 @@ import streamlit as st
 #Import required packages
 import pandas as pd
 import plotly.express as px
-import statsmodels.api as sm
 
 st.title('Aviation and weather in the Netherlands')
 
