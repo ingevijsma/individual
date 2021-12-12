@@ -51,7 +51,7 @@ y = st.radio(label = "Select weather factor:",
 
 fig1 = px.scatter(data_frame = df, 
                   x = x, 
-                  y = y 
+                  y = y, 
                   hover_name = 'Periods', 
                   trendline = 'ols', 
                   trendline_scope = 'trace', 
