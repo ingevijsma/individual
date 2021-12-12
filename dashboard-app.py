@@ -70,7 +70,7 @@ if fig_scatterplot_trendline == False:
                     y = y, 
                     title = 'Number of passengers (arriving/departing) versus weather factors')
 
-st.plotly_chart(fig1)
+#st.plotly_chart(fig1)
 
 with st.expander('More information:'):
 	st.subheader('Scatterplot extra information')
