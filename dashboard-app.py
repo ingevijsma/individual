@@ -29,14 +29,15 @@ Tekst
 Aviation_and_weather_in_July_and_August = pd.read_csv('Aviation and weather in July and August.csv')
 Average_aviation_July_and_August_and_weather_all_year = pd.read_csv('Average aviation July and August and weather all year.csv')
 Aviation_and_weather_all_year = pd.read_csv('Aviation and weather all year.csv')
+
+page_names1 = [Aviation_and_weather_in_July_and_August, Average_aviation_July_and_August_and_weather_all_year, Aviation_and_weather_all_year]
+
+df = st.radio("Select period:", page_names1)
   
-df = st.radio(label = "Select period:", 
-              options = [Aviation_and_weather_in_July_and_August, 
-                         Average_aviation_July_and_August_and_weather_all_year, 
-                         Aviation_and_weather_all_year], 
-              key = ['Aviation and weather in July and August', 
-                     'Average aviation July and August and weather all year', 
-                     'Aviation and weather all year'])
+# df = st.radio(label = "Select period:", 
+#               options = [Aviation_and_weather_in_July_and_August, 
+#                          Average_aviation_July_and_August_and_weather_all_year, 
+#                          Aviation_and_weather_all_year])
               
 x = st.radio(label = "Select type of passengers:", 
              options = [df['Total number of passengers'], 
