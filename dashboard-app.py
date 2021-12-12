@@ -76,6 +76,6 @@ fig1 = px.scatter(data_frame = df,
                   y = y, 
                   trendline = 'ols', 
                   trendline_scope = 'trace', 
-                  title = 'Number of passengers (arriving/departing) versus the three main weather factors')
+                  title = 'Number of passengers (arriving/departing) versus weather factors')
 
 st.plotly_chart(fig1)
