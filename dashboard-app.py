@@ -7,7 +7,6 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 import plotly.offline as pyo
-import geopandas as gpd
 from statsmodels.formula.api import ols
 import folium
 
