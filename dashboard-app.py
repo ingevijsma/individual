@@ -30,7 +30,7 @@ Aviation_and_weather_in_July_and_August = pd.read_csv('Aviation and weather in J
 Average_aviation_July_and_August_and_weather_all_year = pd.read_csv('Average aviation July and August and weather all year.csv')
 Aviation_and_weather_all_year = pd.read_csv('Aviation and weather all year.csv')
 
-page_names1 = [Aviation_and_weather_in_July_and_August, Average_aviation_July_and_August_and_weather_all_year, Aviation_and_weather_all_year]
+page_names1 = ['Aviation_and_weather_in_July_and_August', 'Average_aviation_July_and_August_and_weather_all_year', 'Aviation_and_weather_all_year']
 
 df = st.radio("Select period:", page_names1)
   
