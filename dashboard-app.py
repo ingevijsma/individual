@@ -9,6 +9,9 @@ import statsmodels.api as sm
 #Insert title
 st.title('Aviation and weather in the Netherlands')
 
+#Insert information
+st.info("This research looked at aviation and weather in the Netherlands over the years, from the year 2000 to the year 2021 to be precise. Three different sub-studies were conducted. The first sub-study only looked at the summer months, July and August, and looked at whether the weather in the summer has an impact on the passengers' behaviour, i.e. whether more or fewer passengers arrive or depart. The second study looked at a slightly different period, namely the average number of passengers in the summer period, but did look at the weather during that entire year. This way, it can be examined whether the weather throughout the year has an impact on, for example, passengers who book their tickets early, which is often the case for vacationers in the summer period. The last and third study looked at both year-round aviation and the weather. Hereby, it can be examined whether the weather has an impact on the behaviour of passengers throughout the year and whether a good year in terms of weather has more or less arriving and departing passengers.")
+
 #Upload dataframe
 df = pd.read_csv('ALL2.csv')
 
@@ -118,5 +121,3 @@ st.plotly_chart(fig1)
 with st.expander('More information:'):
 	st.subheader('Tekst')
 	st.markdown('''Tekst''')
-	
-st.info('Tekst')
