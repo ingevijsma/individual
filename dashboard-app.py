@@ -24,11 +24,10 @@ textColor = '#FFFFFF'
 font = "sans serif"
 
 #Insert title
-st.title('Aviation and weather in the Netherlands')
+st.title('Aviation and weather in the Netherlands from 2000 to 2019')
 
 #Insert information
 st.info("""
-Welcome to my interactive dashboard on aviation and weather in the Netherlands from 2000 to 2019!\n 
 Three different studies:\n 
 1. Summer holiday period (July and August): To see if the weather in summer influences the behaviour of (arriving/departing) passengers during the summer holidays.\n 
 2. Summer holiday period (July and August) and weather during the year: To see if the weather throughout the year influences the behaviour of (arriving/departing) early booking passengers.\n 
