@@ -36,7 +36,7 @@ Three different studies:\n
 """)
 
 #Insert warning
-st.warning("Disclaimer: The years 2020 and 2021 are also included but these figures in terms of total, arriving and departing passengers are heavily influenced by the COVID-19 pandemic.")
+st.warning("Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!")
 
 #Upload dataframe
 df = pd.read_csv('data.csv')
