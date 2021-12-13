@@ -9,7 +9,7 @@ import statsmodels.api as sm
 #Insert title
 st.title('Aviation and weather in the Netherlands')
 
-#Make three lists for different periods
+#Make three lists and dataframes for different periods
 july_august = ['Total number of passengers (July, August)', 
 	       'Total passengers arriving (July, August)', 
 	       'Total passengers departing (July, August)', 
@@ -20,6 +20,8 @@ july_august = ['Total number of passengers (July, August)',
 	       'DR (July, August)', 
 	       'RH (July, August)', 
 	       'RHX (July, August)']
+
+July_August = pd.DataFrame(july_august)
 
 july_august_all = ['Total number of passengers (July, August - All)', 
 		   'Total passengers arriving (July, August - All)', 
@@ -32,6 +34,8 @@ july_august_all = ['Total number of passengers (July, August - All)',
 		   'RH (July, August - All)', 
 		   'RHX (July, August - All)']
 
+July_August_Average = pd.DataFrame(july_august_all)
+
 all = ['Total number of passengers (All)', 
        'Total passengers arriving (All)', 
        'Total passengers departing (All)', 
@@ -43,9 +47,11 @@ all = ['Total number of passengers (All)',
        'RH (All)', 
        'RHX (All)']
 
+All = pd.DataFrame(all)
+
 #Make selectbox of the different periods
 period = st.selectbox(label = 'Select period:', 
-		      options = [july_august, july_august_all, all], key = ['july_august', 'july_august_all', 'all'],
+		      options = [July_August, July_August_Average, All], 
 		      help = 'Tekst')
 
 #--------------------
