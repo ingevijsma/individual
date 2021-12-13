@@ -71,10 +71,8 @@ if period == july_august:
 		     help = 'Tekst')
 
 	y = st.multiselect(label = "Select weather factor:", 
-		     options = ['SQ (July, August)', 
-				'TX (July, August)',
-				'TG (July, August)'], 
-		     help = 'Tekst')
+			   options = ['SQ (July, August)', 'TX (July, August)', 'TG (July, August)'], 
+			   help = 'Tekst')
 
 if period == july_august_all:	
 	x = st.radio(label = "Select type of passengers:", 
@@ -83,11 +81,9 @@ if period == july_august_all:
 				'Total passengers departing (July, August - All)'], 
 		     help = 'Tekst')
 
-	y = st.radio(label = "Select weather factor:", 
-		     options = ['SQ (July, August - All)', 
-				'TX (July, August - All)',
-				'TG (July, August - All)'], 
-		     help = 'Tekst')
+	y = st.multiselect(label = "Select weather factor:", 
+			   options = ['SQ (July, August - All)', 'TX (July, August - All)', 'TG (July, August - All)'], 
+			   help = 'Tekst')
 
 if period == all:	
 	x = st.radio(label = "Select type of passengers:", 
@@ -96,11 +92,9 @@ if period == all:
 				'Total passengers departing (All)'], 
 		     help = 'Tekst')
 
-	y = st.radio(label = "Select weather factor:", 
-		     options = ['TX (All)', 
-				'TG (All)', 
-				'TN (All)'], 
-		     help = 'Tekst')
+	y = st.multiselect(label = "Select weather factor:", 
+			   options = ['TX (All)', 'TG (All)', 'TN (All)'], 
+			   help = 'Tekst')
 
 st.markdown('***')
 st.markdown("<h3 style='text-align: center; color: black;'>Number of passengers (arriving/departing) versus weather factors</h3>", unsafe_allow_html = True)
