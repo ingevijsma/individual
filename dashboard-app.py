@@ -10,7 +10,7 @@ import statsmodels.api as sm
 st.title('Aviation and weather in the Netherlands')
 
 #Make three lists for different periods
-july_august = july_august = ['Total number of passengers (July, August)', 
+july_august = ['Total number of passengers (July, August)', 
 	       'Total passengers arriving (July, August)', 
 	       'Total passengers departing (July, August)', 
 	       'TG (July, August)', 
@@ -45,7 +45,7 @@ all = ['Total number of passengers (All)',
 
 #Make selectbox of the different periods
 period = st.selectbox(label = 'Select period:', 
-		      options = [july_august, july_august_all, all], 
+		      options = [july_august, july_august_all, all], key = ['july_august', 'july_august_all', 'all'],
 		      help = 'Tekst')
 
 #--------------------
