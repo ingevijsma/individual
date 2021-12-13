@@ -6,23 +6,6 @@ import pandas as pd
 import plotly.express as px
 import statsmodels.api as sm
 
-# Primary accent for interactive elements
-primaryColor = '#7792E3'
-
-# Background color for the main content area
-backgroundColor = '#273346'
-
-# Background color for sidebar and most interactive widgets
-secondaryBackgroundColor = '#B9F1C0'
-
-# Color used for almost all text
-textColor = '#FFFFFF'
-
-# Font family for all text in the app, except code blocks
-# Accepted values (serif | sans serif | monospace) 
-# Default: "sans serif"
-font = "sans serif"
-
 #Insert title
 st.title('Aviation and weather in the Netherlands from 2000 to 2019')
 
@@ -40,7 +23,7 @@ Three different studies:\n
 #Upload dataframe
 df = pd.read_csv('data.csv')
 
-#Make three lists for different periods
+#Make three lists for different studies
 july_august = ['Total number of passengers (July, August)', 
 	       'Total passengers arriving (July, August)', 
 	       'Total passengers departing (July, August)', 
@@ -74,22 +57,10 @@ all = ['Total number of passengers (All)',
        'RH (All)', 
        'RHX (All)']
 
-#Make selectbox of the different periods
+#Make selectbox of the different studies
 period = st.selectbox(label = 'Select study:', 
 		      options = [july_august, july_august_all, all], 
 		      help = 'Select the desired period for the examination here. The first option is the study in which only the aviation and the weather in the months July and August are investigated. The second option is the study in which only the average aviation in the months July and August was examined and thereby the average weather of that particular year. The third option is the study that looks at the whole year for both aviation and weather.')
-
-#--------------------
-# Aviation_and_weather_in_July_and_August = pd.read_csv('Aviation and weather in July and August.csv')
-# Average_aviation_July_and_August_and_weather_all_year = pd.read_csv('Average aviation July and August and weather all year.csv')
-# Aviation_and_weather_all_year = pd.read_csv('Aviation and weather all year.csv')
-
-#Scatterplot code
-# df = st.radio(label = "Select period:", 
-#               options = [Aviation_and_weather_in_July_and_August, 
-#                          Average_aviation_July_and_August_and_weather_all_year, 
-#                          Aviation_and_weather_all_year])
-#--------------------
               
 if period == july_august:	
 	x = st.radio(label = "Select type of passengers:", 
@@ -124,10 +95,12 @@ if period == all:
 			   options = ['TX (All)', 'TG (All)', 'TN (All)'], 
 			   help = 'Select the desired weather factor(s) here. A previous study looked at which weather factors have the most impact on aviation per period. This resulted in a top three per period, in total seven different weather factors per period were examined. The order of the weather factors to be selected, from left to right, is therefore also important because the weather factor on the left has the greatest impact on aviation and the one on the right has the least impact.')
 
+#Add black line
 st.markdown('***')
 st.markdown("<h3 style='text-align: center; color: black;'>Number of passengers (arriving/departing) versus weather factors</h3>", unsafe_allow_html = True)
 st.markdown('***')
 
+#Code scatterplot with trendline
 fig_scatterplot_trendline = st.checkbox('Trendline', value = False)
 if fig_scatterplot_trendline == True:
   fig1 = px.scatter(data_frame = df, 
