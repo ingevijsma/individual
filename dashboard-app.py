@@ -148,4 +148,4 @@ with st.expander('More information:'):
 	st.markdown("""TG = Daily mean temperature in (degrees Celsius)\n
 TN = Minimum temperature (in degrees Celsius)\n
 TX = Maximum temperature (in degrees Celsius)\n
-SQ = Sunshine duration (in hour) calculated from global radiation (-1 for <0.05 hour))""")
+SQ = Sunshine duration (in hour)""")
