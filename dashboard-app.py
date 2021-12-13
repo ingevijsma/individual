@@ -68,9 +68,9 @@ if period == july_august:
 				'Total passengers departing (July, August)'])
 
 	y = st.radio(label = "Select weather factor:", 
-		     options = ['TG (July, August)', 
-				'TX (July, August)', 
-				'SQ (July, August)'])
+		     options = ['SQ (July, August)', 
+				'TX (July, August)',
+				'TG (July, August)'])
 
 if period == july_august_all:	
 	x = st.radio(label = "Select type of passengers:", 
@@ -79,9 +79,9 @@ if period == july_august_all:
 				'Total passengers departing (July, August - All)'])
 
 	y = st.radio(label = "Select weather factor:", 
-		     options = ['TG (July, August - All)', 
-				'TX (July, August - All)', 
-				'SQ (July, August - All)'])
+		     options = ['SQ (July, August - All)', 
+				'TX (July, August - All)',
+				'TG (July, August - All)'])
 
 if period == all:	
 	x = st.radio(label = "Select type of passengers:", 
@@ -90,9 +90,9 @@ if period == all:
 				'Total passengers departing (All)'])
 
 	y = st.radio(label = "Select weather factor:", 
-		     options = ['TG (All)', 
-				'TN (All)', 
-				'TX (All)'])
+		     options = ['TX (All)', 
+				'TG (All)', 
+				'TN (All)'])
 
 st.markdown('***')
 st.markdown("<h3 style='text-align: center; color: black;'>Number of passengers (arriving/departing) versus weather factors</h3>", unsafe_allow_html = True)
