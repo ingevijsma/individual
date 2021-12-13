@@ -144,5 +144,8 @@ if fig_scatterplot_trendline == False:
 st.plotly_chart(fig1)
 
 with st.expander('More information:'):
-	st.subheader('Tekst')
-	st.markdown('''Tekst''')
+	st.subheader('Abbreviation of weather factors with units:')
+	st.markdown("""TG = Daily mean temperature in (0.1 degrees Celsius)\n
+TN = Minimum temperature (in 0.1 degrees Celsius)\n
+TX = Maximum temperature (in 0.1 degrees Celsius)\n
+SQ = Sunshine duration (in 0.1 hour) calculated from global radiation (-1 for <0.05 hour))""")
