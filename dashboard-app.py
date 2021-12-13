@@ -27,7 +27,7 @@ font = "sans serif"
 st.title('Aviation and weather in the Netherlands from 2000 to 2019')
 
 #Insert warning
-st.warning("Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!")
+st.warning("*Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!*")
 
 #Insert information
 st.info("""
