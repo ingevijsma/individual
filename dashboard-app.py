@@ -26,6 +26,9 @@ font = "sans serif"
 #Insert title
 st.title('Aviation and weather in the Netherlands from 2000 to 2019')
 
+#Insert warning
+st.warning("Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!")
+
 #Insert information
 st.info("""
 Three different studies:\n 
@@ -33,9 +36,6 @@ Three different studies:\n
 2. Summer holiday period (July and August) and weather during the year: To see if the weather throughout the year influences the behaviour of (arriving/departing) early booking passengers.\n 
 3. Year-round: To see if the weather throughout the year influences the behaviour of (arriving/departing) passengers throughout the year.
 """)
-
-#Insert warning
-st.warning("Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!")
 
 #Upload dataframe
 df = pd.read_csv('data.csv')
