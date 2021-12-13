@@ -11,9 +11,40 @@ import streamlit as st
 
 # app.run()
 
-df = Summer, Mix, Year
+july_august = ['Total number of passengers (July, August)', 
+	       'Total passengers arriving (July, August)', 
+	       'Total passengers departing (July, August)', 
+	       'TG (July, August)', 
+	       'TN (July, August)', 
+	       'TX (July, August)', 
+	       'SQ (July, August)', 
+	       'DR (July, August)', 
+	       'RH (July, August)', 
+	       'RHX (July, August)']
 
-st.selectbox('Select period:', df)
+july_august_all = ['Total number of passengers (July, August - All)', 
+		   'Total passengers arriving (July, August - All)', 
+		   'Total passengers departing (July, August - All)', 
+		   'TG (July, August - All)', 
+		   'TN (July, August - All)', 
+		   'TX (July, August - All)', 
+		   'SQ (July, August - All)', 
+		   'DR (July, August - All)', 
+		   'RH (July, August - All)', 
+		   'RHX (July, August - All)']
+
+all = ['Total number of passengers (All)', 
+       'Total passengers arriving (All)', 
+       'Total passengers departing (All)', 
+       'TG (All)', 
+       'TN (All)', 
+       'TX (All)', 
+       'SQ (All)', 
+       'DR (All)', 
+       'RH (All)', 
+       'RHX (All)']
+
+st.selectbox('Select period:', july_august, july_august_all, all)
 
 #Import required packages
 import pandas as pd
