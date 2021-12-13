@@ -44,7 +44,9 @@ all = ['Total number of passengers (All)',
        'RHX (All)']
 
 #Make selectbox of the different periods
-period = st.selectbox('Select period:', [july_august, july_august_all, all])
+period = st.selectbox(label = 'Select period:', 
+		      options = [july_august, july_august_all, all], 
+		      help = 'Tekst')
 
 #--------------------
 # Aviation_and_weather_in_July_and_August = pd.read_csv('Aviation and weather in July and August.csv')
