@@ -10,7 +10,7 @@ import statsmodels.api as sm
 st.title('Aviation and weather in the Netherlands')
 
 #Make three lists for different periods
-july_august = ['Total number of passengers (July, August)', 
+july_august = july_august = ['Total number of passengers (July, August)', 
 	       'Total passengers arriving (July, August)', 
 	       'Total passengers departing (July, August)', 
 	       'TG (July, August)', 
