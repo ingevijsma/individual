@@ -9,8 +9,11 @@ import statsmodels.api as sm
 #Insert title
 st.title('Aviation and weather in the Netherlands')
 
-#Make three lists and dataframes for different periods
-july_august = ['Total number of passengers (July, August)', 
+#Upload dataframe
+df = pd.read_csv('ALL2.csv')
+
+#Make three lists for different periods
+july_august = df[['Total number of passengers (July, August)', 
 	       'Total passengers arriving (July, August)', 
 	       'Total passengers departing (July, August)', 
 	       'TG (July, August)', 
@@ -19,9 +22,9 @@ july_august = ['Total number of passengers (July, August)',
 	       'SQ (July, August)', 
 	       'DR (July, August)', 
 	       'RH (July, August)', 
-	       'RHX (July, August)']
+	       'RHX (July, August)']]
 
-july_august_all = ['Total number of passengers (July, August - All)', 
+july_august_all = df[['Total number of passengers (July, August - All)', 
 		   'Total passengers arriving (July, August - All)', 
 		   'Total passengers departing (July, August - All)', 
 		   'TG (July, August - All)', 
@@ -30,9 +33,9 @@ july_august_all = ['Total number of passengers (July, August - All)',
 		   'SQ (July, August - All)', 
 		   'DR (July, August - All)', 
 		   'RH (July, August - All)', 
-		   'RHX (July, August - All)']
+		   'RHX (July, August - All)']]
 
-all = ['Total number of passengers (All)', 
+all = df[['Total number of passengers (All)', 
        'Total passengers arriving (All)', 
        'Total passengers departing (All)', 
        'TG (All)', 
@@ -41,7 +44,7 @@ all = ['Total number of passengers (All)',
        'SQ (All)', 
        'DR (All)', 
        'RH (All)', 
-       'RHX (All)']
+       'RHX (All)']]
 
 #Make selectbox of the different periods
 period = st.selectbox(label = 'Select period:', 
@@ -59,9 +62,6 @@ period = st.selectbox(label = 'Select period:',
 #                          Average_aviation_July_and_August_and_weather_all_year, 
 #                          Aviation_and_weather_all_year])
 #--------------------
-
-#Upload dataframe
-df = pd.read_csv('ALL2.csv')
               
 if period == july_august:	
 	x = st.radio(label = "Select type of passengers:", 
