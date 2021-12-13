@@ -33,7 +33,7 @@ st.info("This research looked at aviation and weather in the Netherlands over th
 st.warning("Disclaimer: The years 2020 and 2021 are also included but these figures in terms of total, arriving and departing passengers are heavily influenced by the COVID-19 pandemic.")
 
 #Upload dataframe
-df = pd.read_csv('ALL2.csv')
+df = pd.read_excel('data.xlsx')
 
 #Make three lists for different periods
 july_august = ['Total number of passengers (July, August)', 
