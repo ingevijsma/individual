@@ -145,7 +145,7 @@ st.plotly_chart(fig1)
 
 with st.expander('More information:'):
 	st.subheader('Abbreviation of weather factors with units:')
-	st.markdown("""TG = Daily mean temperature in (degrees Celsius)\n
+	st.markdown("""TG = Daily mean temperature (in degrees Celsius)\n
 TN = Minimum temperature (in degrees Celsius)\n
 TX = Maximum temperature (in degrees Celsius)\n
 SQ = Sunshine duration (in hour)""")
