@@ -70,7 +70,7 @@ if period == july_august:
 				'Total passengers departing (July, August)'], 
 		     help = 'Tekst')
 
-	y = st.radio(label = "Select weather factor:", 
+	y = st.multiselect(label = "Select weather factor:", 
 		     options = ['SQ (July, August)', 
 				'TX (July, August)',
 				'TG (July, August)'], 
