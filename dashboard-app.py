@@ -33,8 +33,8 @@ st.warning("Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19
 st.info("""
 Three different studies:\n 
 1. **Summer holiday period (July and August)**: To see if the weather in summer influences the behaviour of (arriving/departing) passengers during the summer holidays.\n 
-2. Summer holiday period (July and August) and weather during the year: To see if the weather throughout the year influences the behaviour of (arriving/departing) early booking passengers.\n 
-3. Year-round: To see if the weather throughout the year influences the behaviour of (arriving/departing) passengers throughout the year.
+2. **Summer holiday period (July and August) and weather during the year**: To see if the weather throughout the year influences the behaviour of (arriving/departing) early booking passengers.\n 
+3. **Year-round**: To see if the weather throughout the year influences the behaviour of (arriving/departing) passengers throughout the year.
 """)
 
 #Upload dataframe
