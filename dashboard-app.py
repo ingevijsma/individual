@@ -44,7 +44,7 @@ all = ['Total number of passengers (All)',
        'RH (All)', 
        'RHX (All)']
 
-st.selectbox('Select period:', july_august, july_august_all, all)
+st.selectbox('Select period:', [july_august, july_august_all, all])
 
 #Import required packages
 import pandas as pd
