@@ -49,7 +49,7 @@ all = ['Total number of passengers (All)',
 #Make selectbox of the different periods
 period = st.selectbox(label = 'Select period:', 
 		      options = [july_august, july_august_all, all], 
-		      help = 'Tekst')
+		      help = 'Select the desired period for the examination here. The first option is the study in which only the aviation and the weather in the months July and August are investigated. The second option is the study in which only the average aviation in the months July and August was examined and thereby the average weather of that particular year. The third option is the study that looks at the whole year for both aviation and weather.')
 
 #--------------------
 # Aviation_and_weather_in_July_and_August = pd.read_csv('Aviation and weather in July and August.csv')
