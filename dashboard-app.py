@@ -118,3 +118,5 @@ st.plotly_chart(fig1)
 with st.expander('More information:'):
 	st.subheader('Tekst')
 	st.markdown('''Tekst''')
+	
+st.info('Tekst')
