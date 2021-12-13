@@ -13,7 +13,7 @@ st.title('Aviation and weather in the Netherlands')
 df = pd.read_csv('ALL2.csv')
 
 #Make three lists for different periods
-july_august = ['Total number of passengers (July, August)', 
+july_august = df['Total number of passengers (July, August)', 
 	       'Total passengers arriving (July, August)', 
 	       'Total passengers departing (July, August)', 
 	       'TG (July, August)', 
