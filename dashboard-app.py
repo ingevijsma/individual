@@ -25,11 +25,11 @@ df = pd.read_csv('data.csv')
 
 #Make selectbox of the different studies
 period = st.selectbox(label = 'Select study:', 
-		      options = ['july_august', 'july_august_all', 'all'], 
+		      options = ['Study 1', 'Study 2', 'Study 3'], 
 		      help = 'Select the desired period for the examination here. The first option is the study in which only the aviation and the weather in the months July and August are investigated. The second option is the study in which only the average aviation in the months July and August was examined and thereby the average weather of that particular year. The third option is the study that looks at the whole year for both aviation and weather.')
 
 #Make three lists for different studies
-if period == 'july_august':
+if period == 'Study 1':
 	july_august = ['Total number of passengers (July, August)', 
 		       'Total passengers arriving (July, August)', 
 		       'Total passengers departing (July, August)', 
@@ -41,7 +41,7 @@ if period == 'july_august':
 		       'RH (July, August)', 
 		       'RHX (July, August)']
 
-if period == 'july_august_all':
+if period == 'Study 2':
 	july_august_all = ['Total number of passengers (July, August - All)', 
 			   'Total passengers arriving (July, August - All)', 
 			   'Total passengers departing (July, August - All)', 
@@ -53,7 +53,7 @@ if period == 'july_august_all':
 			   'RH (July, August - All)', 
 			   'RHX (July, August - All)']
 
-if period == 'all':
+if period == 'Study 3':
 	all = ['Total number of passengers (All)', 
 	       'Total passengers arriving (All)', 
 	       'Total passengers departing (All)', 
