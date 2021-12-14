@@ -65,7 +65,7 @@ if period == 'Study 3':
 	       'RH (All)', 
 	       'RHX (All)']
        
-if period == 'july_august':	
+if period == 'Study 1':	
 	x = st.radio(label = "Select type of passengers:", 
 		     options = ['Total number of passengers (July, August)', 
 				'Total passengers arriving (July, August)', 
@@ -76,7 +76,7 @@ if period == 'july_august':
 			   options = ['SQ (July, August)', 'TX (July, August)', 'TG (July, August)'], 
 			   help = 'Select the desired weather factor(s) here. A previous study looked at which weather factors have the most impact on aviation per period. This resulted in a top three per period, in total seven different weather factors per period were examined. The order of the weather factors to be selected, from left to right, is therefore also important because the weather factor on the left has the greatest impact on aviation and the one on the right has the least impact.')
 
-if period == 'july_august_all':	
+if period == 'Study 2':	
 	x = st.radio(label = "Select type of passengers:", 
 		     options = ['Total number of passengers (July, August - All)', 
 				'Total passengers arriving (July, August - All)', 
@@ -87,7 +87,7 @@ if period == 'july_august_all':
 			   options = ['SQ (July, August - All)', 'TX (July, August - All)', 'TG (July, August - All)'], 
 			   help = 'Select the desired weather factor(s) here. A previous study looked at which weather factors have the most impact on aviation per period. This resulted in a top three per period, in total seven different weather factors per period were examined. The order of the weather factors to be selected, from left to right, is therefore also important because the weather factor on the left has the greatest impact on aviation and the one on the right has the least impact.')
 
-if period == 'all':	
+if period == 'Study 3':	
 	x = st.radio(label = "Select type of passengers:", 
 		     options = ['Total number of passengers (All)', 
 				'Total passengers arriving (All)', 
