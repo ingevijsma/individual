@@ -24,7 +24,7 @@ Three different studies:\n
 df = pd.read_csv('data.csv')
 
 #Make three lists for different studies
-july_august = ['Total number of passengers (July, August)', 
+july_august = {july_august: ['Total number of passengers (July, August)', 
 	       'Total passengers arriving (July, August)', 
 	       'Total passengers departing (July, August)', 
 	       'TG (July, August)', 
@@ -33,7 +33,7 @@ july_august = ['Total number of passengers (July, August)',
 	       'SQ (July, August)', 
 	       'DR (July, August)', 
 	       'RH (July, August)', 
-	       'RHX (July, August)']
+	       'RHX (July, August)']}
 
 july_august_all = ['Total number of passengers (July, August - All)', 
 		   'Total passengers arriving (July, August - All)', 
