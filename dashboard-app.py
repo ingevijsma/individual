@@ -23,17 +23,24 @@ Three different studies:\n
 #Upload dataframe
 df = pd.read_csv('data.csv')
 
+#Make selectbox of the different studies
+period = st.selectbox(label = 'Select study:', 
+		      options = [july_august, july_august_all, all], 
+		      help = 'Select the desired period for the examination here. The first option is the study in which only the aviation and the weather in the months July and August are investigated. The second option is the study in which only the average aviation in the months July and August was examined and thereby the average weather of that particular year. The third option is the study that looks at the whole year for both aviation and weather.')
+
 #Make three lists for different studies
-july_august = {july_august: ['Total number of passengers (July, August)', 
-	       'Total passengers arriving (July, August)', 
-	       'Total passengers departing (July, August)', 
-	       'TG (July, August)', 
-	       'TN (July, August)', 
-	       'TX (July, August)', 
-	       'SQ (July, August)', 
-	       'DR (July, August)', 
-	       'RH (July, August)', 
-	       'RHX (July, August)']}
+if period == july_august:
+	july_august = ['Total number of passengers (July, August)', 
+		       'Total passengers arriving (July, August)', 
+		       'Total passengers departing (July, August)', 
+		       'TG (July, August)', 
+		       'TN (July, August)', 
+		       'TX (July, August)', 
+		       'SQ (July, August)', 
+		       'DR (July, August)', 
+		       'RH (July, August)', 
+		       'RHX (July, August)']
+
 
 july_august_all = ['Total number of passengers (July, August - All)', 
 		   'Total passengers arriving (July, August - All)', 
@@ -56,12 +63,7 @@ all = ['Total number of passengers (All)',
        'DR (All)', 
        'RH (All)', 
        'RHX (All)']
-
-#Make selectbox of the different studies
-period = st.selectbox(label = 'Select study:', 
-		      options = [july_august, july_august_all, all], 
-		      help = 'Select the desired period for the examination here. The first option is the study in which only the aviation and the weather in the months July and August are investigated. The second option is the study in which only the average aviation in the months July and August was examined and thereby the average weather of that particular year. The third option is the study that looks at the whole year for both aviation and weather.')
-              
+       
 if period == july_august:	
 	x = st.radio(label = "Select type of passengers:", 
 		     options = ['Total number of passengers (July, August)', 
