@@ -30,72 +30,72 @@ period = st.selectbox(label = 'Select study:',
 
 #Make three lists for different studies
 if period == 'Study 1':
-	july_august = ['Total number of passengers (July, August)', 
-		       'Total passengers arriving (July, August)', 
-		       'Total passengers departing (July, August)', 
-		       'TG (July, August)', 
-		       'TN (July, August)', 
-		       'TX (July, August)', 
-		       'SQ (July, August)', 
-		       'DR (July, August)', 
-		       'RH (July, August)', 
-		       'RHX (July, August)']
+	july_august = ['Total number of passengers (1)', 
+		       'Total passengers arriving (1)', 
+		       'Total passengers departing (1)', 
+		       'TG (1)', 
+		       'TN (1)', 
+		       'TX (1)', 
+		       'SQ (1)', 
+		       'DR (1)', 
+		       'RH (1)', 
+		       'RHX (1)']
 
 if period == 'Study 2':
-	july_august_all = ['Total number of passengers (July, August - All)', 
-			   'Total passengers arriving (July, August - All)', 
-			   'Total passengers departing (July, August - All)', 
-			   'TG (July, August - All)', 
-			   'TN (July, August - All)', 
-			   'TX (July, August - All)', 
-			   'SQ (July, August - All)', 
-			   'DR (July, August - All)', 
-			   'RH (July, August - All)', 
-			   'RHX (July, August - All)']
+	july_august_all = ['Total number of passengers (2)', 
+			   'Total passengers arriving (2)', 
+			   'Total passengers departing (2)', 
+			   'TG (2)', 
+			   'TN (2)', 
+			   'TX (2)', 
+			   'SQ (2)', 
+			   'DR (2)', 
+			   'RH (2)', 
+			   'RHX (2)']
 
 if period == 'Study 3':
-	all = ['Total number of passengers (All)', 
-	       'Total passengers arriving (All)', 
-	       'Total passengers departing (All)', 
-	       'TG (All)', 
-	       'TN (All)', 
-	       'TX (All)', 
-	       'SQ (All)', 
-	       'DR (All)', 
-	       'RH (All)', 
-	       'RHX (All)']
+	all = ['Total number of passengers (3)', 
+	       'Total passengers arriving (3)', 
+	       'Total passengers departing (3)', 
+	       'TG (3)', 
+	       'TN (3)', 
+	       'TX (3)', 
+	       'SQ (3)', 
+	       'DR (3)', 
+	       'RH (3)', 
+	       'RHX (3)']
        
 if period == 'Study 1':	
 	x = st.radio(label = "Select type of passengers:", 
-		     options = ['Total number of passengers (July, August)', 
-				'Total passengers arriving (July, August)', 
-				'Total passengers departing (July, August)'], 
+		     options = ['Total number of passengers (1)', 
+				'Total passengers arriving (1)', 
+				'Total passengers departing (1)'], 
 		     help = 'Select the desired type of passenger here. The first option is to look at both arriving and departing passengers. The second option is to look only at arriving passengers. The third option is to only look at departing passengers.')
 
 	y = st.multiselect(label = "Select weather factor:", 
-			   options = ['SQ (July, August)', 'TX (July, August)', 'TG (July, August)'], 
+			   options = ['SQ (1)', 'TX (1)', 'TG (1)'], 
 			   help = 'Select the desired weather factor(s) here. A previous study looked at which weather factors have the most impact on aviation per period. This resulted in a top three per period, in total seven different weather factors per period were examined. The order of the weather factors to be selected, from left to right, is therefore also important because the weather factor on the left has the greatest impact on aviation and the one on the right has the least impact.')
 
 if period == 'Study 2':	
 	x = st.radio(label = "Select type of passengers:", 
-		     options = ['Total number of passengers (July, August - All)', 
-				'Total passengers arriving (July, August - All)', 
-				'Total passengers departing (July, August - All)'], 
+		     options = ['Total number of passengers (2)', 
+				'Total passengers arriving (2)', 
+				'Total passengers departing (2)'], 
 		     help = 'Select the desired type of passenger here. The first option is to look at both arriving and departing passengers. The second option is to look only at arriving passengers. The third option is to only look at departing passengers.')
 
 	y = st.multiselect(label = "Select weather factor:", 
-			   options = ['SQ (July, August - All)', 'TX (July, August - All)', 'TG (July, August - All)'], 
+			   options = ['SQ (2)', 'TX (2)', 'TG (2)'], 
 			   help = 'Select the desired weather factor(s) here. A previous study looked at which weather factors have the most impact on aviation per period. This resulted in a top three per period, in total seven different weather factors per period were examined. The order of the weather factors to be selected, from left to right, is therefore also important because the weather factor on the left has the greatest impact on aviation and the one on the right has the least impact.')
 
 if period == 'Study 3':	
 	x = st.radio(label = "Select type of passengers:", 
-		     options = ['Total number of passengers (All)', 
-				'Total passengers arriving (All)', 
-				'Total passengers departing (All)'], 
+		     options = ['Total number of passengers (3)', 
+				'Total passengers arriving (3)', 
+				'Total passengers departing (3)'], 
 		     help = 'Select the desired type of passenger here. The first option is to look at both arriving and departing passengers. The second option is to look only at arriving passengers. The third option is to only look at departing passengers.')
 
 	y = st.multiselect(label = "Select weather factor:", 
-			   options = ['TX (All)', 'TG (All)', 'TN (All)'], 
+			   options = ['TX (3)', 'TG (3)', 'TN (3)'], 
 			   help = 'Select the desired weather factor(s) here. A previous study looked at which weather factors have the most impact on aviation per period. This resulted in a top three per period, in total seven different weather factors per period were examined. The order of the weather factors to be selected, from left to right, is therefore also important because the weather factor on the left has the greatest impact on aviation and the one on the right has the least impact.')
 
 #Add black line
