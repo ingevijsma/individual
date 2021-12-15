@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import statsmodels.api as sm
+import plotly.graph_objects as go
 
 #Insert title
 st.title('Aviation and weather in the Netherlands from 2000 to 2019')
@@ -125,3 +126,20 @@ with st.expander('More information:'):
 TN = Minimum temperature (in degrees Celsius)\n
 TX = Maximum temperature (in degrees Celsius)\n
 SQ = Sunshine duration (in hour)""")
+	
+#--------------------
+# Create the base figure
+fig = go.Figure()
+
+# Add the bar graph of daily temperatures
+fig.add_trace(
+  go.Bar(x = df['Periods'], y = df['Total number of passengers (1)'], name = 'Passengers'))
+
+# Add the monthly average line graph
+fig.add_trace(
+  go.Scatter(x = df['Periods'], y = df['TG (1)'], name = 'Weather'))
+
+fig.update_yaxes(type = "log")
+
+# Show the plot
+fig.show()
