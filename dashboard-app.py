@@ -132,12 +132,10 @@ SQ = Sunshine duration (in hour)""")
 fig = go.Figure()
 
 # Add the bar graph of daily temperatures
-fig.add_trace(
-  go.Bar(x = df['Periods'], y = df['Total number of passengers (1)'], name = 'Passengers'))
+fig.add_trace(go.Bar(x = df['Periods'], y = df['Total number of passengers (1)'], name = 'Passengers'))
 
 # Add the monthly average line graph
-fig.add_trace(
-  go.Scatter(x = df['Periods'], y = df['TG (1)'], name = 'Weather'))
+fig.add_trace(go.Scatter(x = df['Periods'], y = df['TG (1)'], name = 'Weather'))
 
 fig.update_yaxes(type = "log")
 
