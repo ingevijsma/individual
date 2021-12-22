@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 
 #Insert title
 st.title('Aviation and Weather in the Netherlands')
-st.header('From 2000 to 2019')
+st.subheader('From 2000 to 2019')
 
 #Insert warning
 st.warning("*Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!*")
