@@ -126,7 +126,7 @@ with st.expander('More information:'):
 	st.markdown("""TG = Daily mean temperature (in degrees Celsius)\n
 TN = Minimum temperature (in degrees Celsius)\n
 TX = Maximum temperature (in degrees Celsius)\n
-SQ = Sunshine duration (in hour)""")
+SQ = Sunshine duration (in hours)""")
 	
 #--------------------
 # # Create the base figure
