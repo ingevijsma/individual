@@ -86,7 +86,7 @@ if period == 'Study 2':
 		     help = 'Select the desired type of passenger here. The first option is to look at both arriving and departing passengers. The second option is to look only at arriving passengers. The third option is to only look at departing passengers.')
 
 	y = st.multiselect(label = "Select weather factor(s):", 
-			   options = ['SQ (2)', 'TX (2)', 'TG (2)'], 
+			   options = ['RHX (2)', 'RH (2)', 'SQ (2)'], 
 			   help = 'Select the desired weather factor(s) here. A previous study looked at which weather factors have the most impact on aviation per period. This resulted in a top three per period, in total seven different weather factors per period were examined. The order of the weather factors to be selected, from left to right, is therefore also important because the weather factor on the left has the greatest impact on aviation and the one on the right has the least impact.')
 
 if period == 'Study 3':	
@@ -126,7 +126,9 @@ with st.expander('More information:'):
 	st.markdown("""TG = Daily mean temperature (in degrees Celsius)\n
 TN = Minimum temperature (in degrees Celsius)\n
 TX = Maximum temperature (in degrees Celsius)\n
-SQ = Sunshine duration (in hours)""")
+SQ = Sunshine duration (in hours)\n
+RH = Daily precipitation amount (in mm)\n
+RHX = Maximum hourly precipitation amount (in mm)""")
 	
 #--------------------
 # # Create the base figure
