@@ -23,7 +23,7 @@ Three different studies:\n
 """)
 
 #Upload dataframe
-df = pd.read_csv('data.csv')
+df = pd.read_csv('STREAMLIT.csv')
 
 #Make selectbox of the different studies
 period = st.selectbox(label = 'Select study:', 
