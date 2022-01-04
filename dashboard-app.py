@@ -127,6 +127,7 @@ with st.expander('More information:'):
 TN = Minimum temperature (in degrees Celsius)\n
 TX = Maximum temperature (in degrees Celsius)\n
 SQ = Sunshine duration (in hours)\n
+DR = Precipitation duration (in hours)\n
 RH = Daily precipitation amount (in mm)\n
 RHX = Maximum hourly precipitation amount (in mm)""")
 	
