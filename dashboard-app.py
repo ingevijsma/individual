@@ -7,7 +7,7 @@ import plotly.express as px
 import statsmodels.api as sm
 import plotly.graph_objects as go
 
-#Insert title
+#Insert title and subheader
 st.title('Aviation and Weather in the Netherlands')
 st.subheader('From 2000 to 2019')
 
@@ -28,7 +28,7 @@ df = pd.read_csv('STREAMLIT.csv')
 #Make selectbox of the different studies
 period = st.selectbox(label = 'Select study:', 
 		      options = ['Study 1', 'Study 2', 'Study 3'], 
-		      help = 'Select the desired period for the examination here. The first option is the study in which only the aviation and the weather in the months July and August are investigated. The second option is the study in which only the average aviation in the months July and August was examined and thereby the average weather of that particular year. The third option is the study that looks at the whole year for both aviation and weather.')
+		      help = 'Select the desired study here. Study 1 examines only the months of July and August. Study 2 examines only the months of July and August for aviation and the entire year for weather factors. Study 3 examines the entire year.')
 
 #Make three lists for different studies
 if period == 'Study 1':
@@ -67,45 +67,46 @@ if period == 'Study 3':
 	       'RH (3)', 
 	       'RHX (3)']
        
+#Make radio and multiselect per study for different types of passengers and weather factors, respectively
 if period == 'Study 1':	
 	x = st.radio(label = "Select type of passengers:", 
 		     options = ['Total number of passengers (1)', 
 				'Total passengers arriving (1)', 
 				'Total passengers departing (1)'], 
-		     help = 'Select the desired type of passenger here. The first option is to look at both arriving and departing passengers. The second option is to look only at arriving passengers. The third option is to only look at departing passengers.')
+		     help = 'Select the desired type of passenger here. Option 1 is both arriving and departing. Option 2 is arriving only and option 3 is departing only.')
 
 	y = st.multiselect(label = "Select weather factor(s):", 
 			   options = ['SQ (1)', 'TX (1)', 'RHX (1)', 'TG (1)', 'RH (1)'], 
-			   help = 'Select the desired weather factor(s) here. A previous study looked at which weather factors have the most impact on aviation per period. This resulted in a top three per period, in total seven different weather factors per period were examined. The order of the weather factors to be selected, from left to right, is therefore also important because the weather factor on the left has the greatest impact on aviation and the one on the right has the least impact.')
+			   help = 'Select the desired weather factor(s) here. Previous research has determined the five most important weather factors related to passenger volume. These weather factors are listed in order from left to right in the multiselect and from top to bottom in the legend to the figure in terms of importance.')
 
 if period == 'Study 2':	
 	x = st.radio(label = "Select type of passengers:", 
 		     options = ['Total number of passengers (2)', 
 				'Total passengers arriving (2)', 
 				'Total passengers departing (2)'], 
-		     help = 'Select the desired type of passenger here. The first option is to look at both arriving and departing passengers. The second option is to look only at arriving passengers. The third option is to only look at departing passengers.')
+		     help = 'Select the desired type of passenger here. Option 1 is both arriving and departing. Option 2 is arriving only and option 3 is departing only.')
 
 	y = st.multiselect(label = "Select weather factor(s):", 
 			   options = ['SQ (2)', 'TX (2)', 'TG (2)', 'RH (2)', 'RHX (2)'], 
-			   help = 'Select the desired weather factor(s) here. A previous study looked at which weather factors have the most impact on aviation per period. This resulted in a top three per period, in total seven different weather factors per period were examined. The order of the weather factors to be selected, from left to right, is therefore also important because the weather factor on the left has the greatest impact on aviation and the one on the right has the least impact.')
+			   help = 'Select the desired weather factor(s) here. Previous research has determined the five most important weather factors related to passenger volume. These weather factors are listed in order from left to right in the multiselect and from top to bottom in the legend to the figure in terms of importance.')
 
 if period == 'Study 3':	
 	x = st.radio(label = "Select type of passengers:", 
 		     options = ['Total number of passengers (3)', 
 				'Total passengers arriving (3)', 
 				'Total passengers departing (3)'], 
-		     help = 'Select the desired type of passenger here. The first option is to look at both arriving and departing passengers. The second option is to look only at arriving passengers. The third option is to only look at departing passengers.')
+		     help = 'Select the desired type of passenger here. Option 1 is both arriving and departing. Option 2 is arriving only and option 3 is departing only.')
 
 	y = st.multiselect(label = "Select weather factor(s):", 
 			   options = ['TX (3)', 'TG (3)', 'TN (3)', 'SQ (3)', 'DR (3)'], 
-			   help = 'Select the desired weather factor(s) here. A previous study looked at which weather factors have the most impact on aviation per period. This resulted in a top three per period, in total seven different weather factors per period were examined. The order of the weather factors to be selected, from left to right, is therefore also important because the weather factor on the left has the greatest impact on aviation and the one on the right has the least impact.')
+			   help = 'Select the desired weather factor(s) here. Previous research has determined the five most important weather factors related to passenger volume. These weather factors are listed in order from left to right in the multiselect and from top to bottom in the legend to the figure in terms of importance.')
 
 #Add black line
 st.markdown('***')
 st.markdown("<h3 style='text-align: center; color: black;'>Number of passengers (arriving/departing) versus weather factors</h3>", unsafe_allow_html = True)
 st.markdown('***')
 
-#Code scatterplot with trendline
+#Code scatterplot with and without trendline
 fig_scatterplot_trendline = st.checkbox('Trendline', value = False)
 if fig_scatterplot_trendline == True:
   fig1 = px.scatter(data_frame = df, 
@@ -123,6 +124,7 @@ if fig_scatterplot_trendline == False:
 
 st.plotly_chart(fig1)
 
+#Insert expander
 with st.expander('More information:'):
 	st.subheader('Abbreviation of weather factors with units:')
 	st.markdown("""TG = Daily mean temperature (in degrees Celsius)\n
@@ -132,20 +134,3 @@ SQ = Sunshine duration (in hours)\n
 DR = Precipitation duration (in hours)\n
 RH = Daily precipitation amount (in mm)\n
 RHX = Maximum hourly precipitation amount (in mm)""")
-	
-#--------------------
-# # Create the base figure
-# fig = go.Figure()
-
-# # Add the bar graph of daily temperatures
-# fig.add_trace(
-# 	go.Bar(x = df['Periods'], y = df['Total number of passengers (1)'], name = 'Passengers'))
-
-# # Add the monthly average line graph
-# fig.add_trace(
-# 	go.Scatter(x = df['Periods'], y = df['TG (1)'], name = 'Weather'))
-
-# fig.update_yaxes(type = "log")
-
-# # Show the plot
-# fig.show()
