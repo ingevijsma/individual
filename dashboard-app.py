@@ -112,12 +112,14 @@ if fig_scatterplot_trendline == True:
                     x = x, 
                     y = y, 
                     trendline = 'ols', 
-                    trendline_scope = 'trace')
+                    trendline_scope = 'trace', 
+		    log_y = True)
   
 if fig_scatterplot_trendline == False:
   fig1 = px.scatter(data_frame = df, 
                     x = x, 
-                    y = y)
+                    y = y, 
+		    log_y = True)
 
 st.plotly_chart(fig1)
 
