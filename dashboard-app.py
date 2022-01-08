@@ -18,7 +18,7 @@ st.warning("*Disclaimer: The years 2020 and 2021 are excluded due to the COVID-1
 st.info("""
 Three different studies:\n
 1. **Summer holiday period**: Investigate whether the weather during the summer influences the behaviour of (arriving/departing) (holiday) passengers during the summer period.\n
-2. **Aviation summer holiday period and weather during the year**: Investigate whether the weather during the year influences the behaviour of (arriving/departing) (early booking) (holiday) passengers in the summer period.\n 
+2. **Aviation during the summer holiday period and weather during the year**: Investigate whether the weather during the year influences the behaviour of (arriving/departing) (early booking) (holiday) passengers in the summer period.\n 
 3. **Year-round aviation and weather**: Investigate whether the weather during the year influences the behaviour of (arriving/departing) passengers all year round.\n
 """)
 
