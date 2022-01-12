@@ -118,19 +118,21 @@ if fig_scatterplot_trendline == True:
   fig1 = px.scatter(data_frame = df, 
                     x = x, 
                     y = y, 
-		    labels = {'value': 'Value'},
+		    labels = {'value': 'Value'}, 
+		    color_discrete_sequence = ['red', 'green', 'purple', 'yellow', 'orange'],
                     trendline = 'ols', 
                     trendline_scope = 'trace', 
 		    log_y = True, 
-		    title = 'Number of passengers (arriving/departing) versus weather factors',)
+		    title = 'Number of passengers (arriving/departing) versus weather factors')
   
 if fig_scatterplot_trendline == False:
   fig1 = px.scatter(data_frame = df, 
                     x = x, 
                     y = y, 
-		    labels = {'value': 'Value'},
+		    labels = {'value': 'Value'}, 
+		    color_discrete_sequence = ['red', 'green', 'purple', 'yellow', 'orange'],
 		    log_y = True, 
-		    title = 'Number of passengers (arriving/departing) versus weather factors',)
+		    title = 'Number of passengers (arriving/departing) versus weather factors')
 
 col2.plotly_chart(fig1)
 
