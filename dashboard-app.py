@@ -132,11 +132,11 @@ if fig_scatterplot_trendline == False:
 col2.plotly_chart(fig1)
 
 #Insert expander
-with col2.header('Abbreviation of weather factors with units:'):
-	st.write("""TG = Daily mean temperature (in degrees Celsius)\n
-TN = Minimum temperature (in degrees Celsius)\n
-TX = Maximum temperature (in degrees Celsius)\n
-SQ = Sunshine duration (in hours)\n
-DR = Precipitation duration (in hours)\n
-RH = Daily precipitation amount (in mm)\n
-RHX = Maximum hourly precipitation amount (in mm)""")
+with col2.expander('Abbreviation of weather factors with units:'):
+	st.write("""**TG** = Daily mean temperature (in degrees Celsius)\n
+**TN** = Minimum temperature (in degrees Celsius)\n
+**TX** = Maximum temperature (in degrees Celsius)\n
+**SQ** = Sunshine duration (in hours)\n
+**DR** = Precipitation duration (in hours)\n
+**RH** = Daily precipitation amount (in mm)\n
+**RHX** = Maximum hourly precipitation amount (in mm)""")
