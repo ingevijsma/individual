@@ -1,6 +1,6 @@
 [theme]
 primaryColor = "black"
 backgroundColor = "snow"
-secondaryBackgroundColor = "rosybrown"
+secondaryBackgroundColor = "linen"
 textColor = "black"
-font = "monospace"
+font = "sans serif"
