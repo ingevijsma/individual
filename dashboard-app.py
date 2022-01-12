@@ -119,7 +119,7 @@ if fig_scatterplot_trendline == True:
                     x = x, 
                     y = y, 
 		    labels = {'value': 'Value'}, 
-		    color_discrete_sequence = ['hotpink', 'cornflowerblue', 'seagreen', 'slateblue', 'coral'],
+		    color_discrete_sequence = ['hotpink', 'gold', 'seagreen', 'slateblue', 'coral'],
                     trendline = 'ols', 
                     trendline_scope = 'trace', 
 		    log_y = True, 
