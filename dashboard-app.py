@@ -132,7 +132,7 @@ if fig_scatterplot_trendline == False:
 col2.plotly_chart(fig1)
 
 #Insert expander
-with col2.expander("""**Abbreviation of weather factors with units:**"""):
+with col2.expander('Abbreviation of weather factors with units:'):
 	st.markdown("""TG = Daily mean temperature (in degrees Celsius)\n
 TN = Minimum temperature (in degrees Celsius)\n
 TX = Maximum temperature (in degrees Celsius)\n
