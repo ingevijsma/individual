@@ -113,7 +113,7 @@ if fig_scatterplot_trendline == True:
   fig1 = px.scatter(data_frame = df, 
                     x = x, 
                     y = y, 
-		    labels = {'value': 'Value'}, 
+		    labels = {'value': 'Value', 'variable': 'Weather factor'}, 
 		    color_discrete_sequence = ['#5CB9FF', '#9372FF', '#7EFF72', '#FF5CB7', '#F2FF28'],
                     trendline = 'ols', 
                     trendline_scope = 'trace', 
@@ -124,7 +124,7 @@ if fig_scatterplot_trendline == False:
   fig1 = px.scatter(data_frame = df, 
                     x = x, 
                     y = y, 
-		    labels = {'value': 'Value'}, 
+		    labels = {'value': 'Value', 'variable': 'Weather factor'}, 
 		    color_discrete_sequence = ['#5CB9FF', '#9372FF', '#7EFF72', '#FF5CB7', '#F2FF28'],
 		    log_y = True, 
 		    title = 'Number of passengers (arriving/departing) versus weather factors')
