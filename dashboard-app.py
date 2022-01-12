@@ -116,19 +116,21 @@ if period == 'Study 3':
 fig_scatterplot_trendline = col2.checkbox('Trendline', value = False)
 if fig_scatterplot_trendline == True:
   fig1 = px.scatter(data_frame = df, 
-		    title = 'Number of passengers (arriving/departing) versus weather factors',
                     x = x, 
                     y = y, 
+		    labels = {'value': 'Value'},
                     trendline = 'ols', 
                     trendline_scope = 'trace', 
-		    log_y = True)
+		    log_y = True, 
+		    title = 'Number of passengers (arriving/departing) versus weather factors',)
   
 if fig_scatterplot_trendline == False:
   fig1 = px.scatter(data_frame = df, 
-		    title = 'Number of passengers (arriving/departing) versus weather factors',
                     x = x, 
                     y = y, 
-		    log_y = True)
+		    labels = {'value': 'Value'},
+		    log_y = True, 
+		    title = 'Number of passengers (arriving/departing) versus weather factors',)
 
 col2.plotly_chart(fig1)
 
