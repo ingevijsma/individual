@@ -125,6 +125,7 @@ if fig_scatterplot_trendline == True:
   
 if fig_scatterplot_trendline == False:
   fig1 = px.scatter(data_frame = df, 
+		    title = 'Number of passengers (arriving/departing) versus weather factors',
                     x = x, 
                     y = y, 
 		    log_y = True)
