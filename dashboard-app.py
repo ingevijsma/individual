@@ -8,7 +8,7 @@ import statsmodels.api as sm
 import plotly.graph_objects as go
 
 #Set up page configuration
-st.set_page_config(page_icon = "🧊", layout = "wide")
+st.set_page_config(layout = 'wide')
 
 #Insert title and subheader
 st.title('Aviation and Weather in the Netherlands')
@@ -106,11 +106,6 @@ if period == 'Study 3':
 	y = col1.multiselect(label = "Select weather factor(s):", 
 			     options = ['TX (3)', 'TG (3)', 'TN (3)', 'SQ (3)', 'DR (3)'],
 			     help = 'Select the desired weather factor(s) here. Previous research has determined the five most important weather factors related to passenger volume. These weather factors are listed in order from left to right in the multiselect and from top to bottom in the legend to the figure in terms of importance.')
-
-# #Add black line
-# st.markdown('***')
-# st.markdown("<h3 style='text-align: center; color: black;'>Number of passengers (arriving/departing) versus weather factors</h3>", unsafe_allow_html = True)
-# st.markdown('***')
 
 #Code scatterplot with and without trendline
 fig_scatterplot_trendline = col2.checkbox('Trendline', value = False)
