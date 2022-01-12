@@ -133,8 +133,8 @@ col2.plotly_chart(fig1)
 
 #Insert expander
 with col2.expander('More information:'):
-	col2.subheader('Abbreviation of weather factors with units:')
-	col2.markdown("""TG = Daily mean temperature (in degrees Celsius)\n
+	st.subheader('Abbreviation of weather factors with units:')
+	st.markdown("""TG = Daily mean temperature (in degrees Celsius)\n
 TN = Minimum temperature (in degrees Celsius)\n
 TX = Maximum temperature (in degrees Celsius)\n
 SQ = Sunshine duration (in hours)\n
