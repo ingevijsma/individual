@@ -10,11 +10,11 @@ import plotly.graph_objects as go
 #Set up page configuration
 st.set_page_config(layout = "wide")
 
+#Insert title and subheader
+st.title('Aviation and Weather in the Netherlands')
+
 #Set up columns
 col1, col2 = st.columns(2)
-
-#Insert title and subheader
-col1.title('Aviation and Weather in the Netherlands')
 col1.subheader('From 2000 to 2019')
 
 #Insert warning
