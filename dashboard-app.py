@@ -8,7 +8,7 @@ import statsmodels.api as sm
 import plotly.graph_objects as go
 
 #Set up page configuration
-st.set_page_config(layout = "wide")
+st.set_page_config(page_icon = "🧊", layout = "wide")
 
 #Insert title and subheader
 st.title('Aviation and Weather in the Netherlands')
