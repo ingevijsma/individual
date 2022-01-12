@@ -18,7 +18,7 @@ col1, col2 = st.columns(2)
 col1.subheader('From 2000 to 2019')
 
 #Insert warning
-col1.warning("*Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!*", f'<h1 style="color:#33ff33;font-size:24px;">{"ColorMeBlue text”"}</h1>', unsafe_allow_html=True)
+col1.warning("*Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!*", '<h1 style="color:#33ff33;font-size:24px;">{"ColorMeBlue text”"}</h1>', unsafe_allow_html=True)
 
 #Insert information
 col1.info("""
