@@ -18,10 +18,10 @@ col1, col2 = st.columns(2)
 col1.subheader('From 2000 to 2019')
 
 #Insert warning
-col1.warning("*Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!*", '<h1 style="color:#33ff33;font-size:24px;">{"ColorMeBlue text”"}</h1>', unsafe_allow_html=True)
+col1.write("*Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!*")
 
 #Insert information
-col1.info("""
+col1.write("""
 Three different studies:\n
 1. **Summer holiday period**: Investigate whether the weather during the summer influences the behaviour of (arriving/departing) (holiday) passengers during the summer period.\n
 2. **Aviation during the summer holiday period and weather during the year**: Investigate whether the weather during the year influences the behaviour of (arriving/departing) (early booking) (holiday) passengers in the summer period.\n 
