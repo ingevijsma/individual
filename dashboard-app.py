@@ -7,6 +7,9 @@ import plotly.express as px
 import statsmodels.api as sm
 import plotly.graph_objects as go
 
+#Set page configuration
+st.set_page_config(layout = "wide")
+
 #Insert title and subheader
 st.title('Aviation and Weather in the Netherlands')
 st.subheader('From 2000 to 2019')
