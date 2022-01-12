@@ -119,7 +119,7 @@ if fig_scatterplot_trendline == True:
                     x = x, 
                     y = y, 
 		    labels = {'value': 'Value'}, 
-		    color_discrete_sequence = ['red', 'green', 'purple', 'yellow', 'orange'],
+		    color_discrete_sequence = ['lightcoral', 'cornflowerblue', 'mediumaquamarine', 'mediumpurple', 'coral'],
                     trendline = 'ols', 
                     trendline_scope = 'trace', 
 		    log_y = True, 
@@ -130,7 +130,7 @@ if fig_scatterplot_trendline == False:
                     x = x, 
                     y = y, 
 		    labels = {'value': 'Value'}, 
-		    color_discrete_sequence = ['red', 'green', 'purple', 'yellow', 'orange'],
+		    color_discrete_sequence = ['lightcoral', 'cornflowerblue', 'mediumaquamarine', 'mediumpurple', 'coral'],
 		    log_y = True, 
 		    title = 'Number of passengers (arriving/departing) versus weather factors')
 
