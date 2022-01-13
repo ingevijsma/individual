@@ -125,7 +125,7 @@ if fig_scatterplot_trendline == False:
                     x = x, 
                     y = y, 
 		    labels = {'value': 'Value', 'variable': 'Weather factor'}, 
-		    color_discrete_sequence = ['#5CB9FF', '#9372FF', '#7EFF72', '#FF5CB7', '#F2FF28'],
+		    color_discrete_sequence = ['#A3586D', '#5C4A72', '#F3B05A', '#F4874B', '#F46A4E'],
 		    log_y = True, 
 		    title = 'Number of passengers (arriving/departing) versus weather factors')
 
