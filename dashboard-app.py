@@ -114,7 +114,7 @@ if fig_scatterplot_trendline == True:
                     x = x, 
                     y = y, 
 		    labels = {'value': 'Value', 'variable': 'Weather factor'}, 
-		    color_discrete_sequence = ['#152852', '#4B3D60', '#FD5E53', '#FC9C54', '#FFE373'],
+		    color_discrete_sequence = ['#A3586D', '#5C4A72', '#F3B05A', '#F4874B', '#F46A4E'],
                     trendline = 'ols', 
                     trendline_scope = 'trace', 
 		    log_y = True, 
