@@ -10,17 +10,19 @@ import plotly.graph_objects as go
 #Set up page configuration
 st.set_page_config(layout = 'wide')
 
-#Insert title and subheader
+#Insert title
 st.title('Aviation and Weather in the Netherlands')
 
 #Set up columns
 col1, col2 = st.columns(2)
+
+#Insert subheader
 col1.subheader('From 2000 to 2019')
 
-#Insert warning
+#Insert write
 col1.write("*Disclaimer: The years 2020 and 2021 are excluded due to the COVID-19 pandemic!*")
 
-#Insert information
+#Insert write
 col1.write("""
 Three different studies:\n
 1. **Summer holiday period**: Investigate whether the weather during the summer influences the behaviour of (arriving/departing) (holiday) passengers during the summer period.\n
